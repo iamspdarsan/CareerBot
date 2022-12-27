@@ -56,7 +56,8 @@ def getinput():
 def installation_check():
     if not os.path.isdir(des) or len(os.listdir(des))==0:
         #installation prompt
-        shutil.rmtree(des)
+        if os.path.isdir(des):
+            shutil.rmtree(des)
         input("Let start with installation\npress enter to continue")
         install()
     else:
