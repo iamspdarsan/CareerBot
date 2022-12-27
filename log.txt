@@ -1,0 +1,12 @@
+Login success | 27:12:2022 - 12:41:46:AM
+Filtered job query link captured | 27:12:2022 - 12:44:42:AM
+Apply message not found | 27:12:2022 - 06:42:46:PM
+Apply on site error | 27:12:2022 - 06:43:28:PM
+Apply on site error | 27:12:2022 - 06:44:50:PM
+Apply on site error | 27:12:2022 - 06:45:31:PM
+Apply on site error | 27:12:2022 - 06:46:12:PM
+You have successfully applied to 'PYTHON Developer'
+https://www.naukri.com/myapply/saveApply?strJobsarr=290922501674&applytype=single&resId=230243909&ApplyMode=1&logstr=--jobsearchDesk-8-F-0-1--16721466528395362-&id=&src=&reqId=&response=&questData=&multiApplyResp={%22290922501674%22:200}&https_apply=&jquery=1&edup=&applySrc=jobsearchDesk&isMobile=&actualDomain=www.naukri.com&interest=&https_apply=&cb=&fb=&appreqid=&ip=49.206.112.240&webApp=&jobTitle=PYTHON%20Developer | 27:12:2022 - 06:47:14:PM
+You have successfully applied to 'SOFTWARE ENGINEER/WEB DEVELOPE...'
+https://www.naukri.com/myapply/saveApply?strJobsarr=250522500167&applytype=single&resId=230243909&ApplyMode=1&logstr=--jobsearchDesk-9-F-0-1--16721466528395362-&id=&src=&reqId=&response=&questData=&multiApplyResp={%22250522500167%22:200}&https_apply=&jquery=1&edup=&applySrc=jobsearchDesk&isMobile=&actualDomain=www.naukri.com&interest=&https_apply=&cb=&fb=&appreqid=&ip=49.206.112.240&webApp=&jobTitle=SOFTWARE%20ENGINEER/WEB%20DEVELOPER | 27:12:2022 - 06:48:15:PM
+success ratio 2/2 | 27:12:2022 - 06:48:17:PM

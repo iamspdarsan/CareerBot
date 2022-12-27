@@ -117,7 +117,7 @@ def applyjobs(filteredjobs:str,applylimit:int=10):
     increval=1
     successrate=0
     windows=driver.window_handles
-    while successrate != applylimit:
+    while successrate < applylimit:
         driver.switch_to.window(windows[0])#Job Listing window
         driver.find_element(By.XPATH,f"//div[@class='list']/article[{increval}]").click()
         increval+=1
@@ -128,14 +128,15 @@ def applyjobs(filteredjobs:str,applylimit:int=10):
             driver.execute_script('close()')
             continue
         except:
-            pass  
+            pass#dummy pass  
         try:
             driver.find_element(By.XPATH,"//button[@class='waves-effect waves-ripple btn apply-button']").click()
         except:
-            #logwriter("Apply on site error")
+            logwriter("Apply on site error")
             driver.execute_script('close()')
             continue
         try:
+            #close prompting window
             driver.find_element(By.ID,'skip_qup').click()
         except:
             try:
@@ -144,9 +145,25 @@ def applyjobs(filteredjobs:str,applylimit:int=10):
                 continue
             except:
                 pass
-        status=driver.find_element(By.XPATH,"//div[@class='upper-section']/span[@class='apply-message']").text
-        driver.execute_script('close()')
-        if "You have successfully applied to" in status:
-            successrate+=1 
-            logwriter(f"{status}\n{driver.current_url}")
+        url=driver.current_url
+        driver.implicitly_wait(30)
+        try:
+            status=driver.find_element(By.XPATH,"//div[@class='upper-section']/span[@class='apply-message']").text
+            successrate+=1
+            logwriter(f"{status}\n{url}")
+            driver.execute_script('close()')
+        except:
+            logwriter("Apply message not found")
+            driver.execute_script('close()')
+            continue
+    driver.quit()
     logwriter(f"success ratio {successrate}/{applylimit}")
+
+
+def browserinspect():
+    option=Options()
+    #option.add_argument(argument='--headless')    
+    option.add_argument(fr'--user-data-dir={userdir}')
+    driver=webdriver.Chrome(executable_path='chromedriver.exe',options=option)
+    driver.get('https://www.naukri.com/')
+    input("press enter to stop")

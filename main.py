@@ -33,7 +33,7 @@ def uninstall():
     print("Uninstall process started")
     shutil.rmtree(des)
     os.system(f'del C:\\Users\\{username}\\Desktop\\CareerBot.bat')
-    input("Uninstalled successfully")
+    input("Uninstalled successfully\npress enter to close")
     sys.exit()
 
 
@@ -68,7 +68,7 @@ def installation_check():
 def delete_schedule():
     cmd='schtasks /delete /tn "CareerBot" /f'
     os.system(cmd)
-    input("press enter")
+    input("press enter to back to main menu")
     start_cli()
 
 
@@ -90,6 +90,7 @@ def start_cli():
             
     elif inp == 2:
         core.setjoburl()
+        input("press enter to back to main menu")
         start_cli()
 
     elif inp == 3:
@@ -103,7 +104,7 @@ def start_cli():
             command=f'schtasks /create /sc daily /tn "CareerBot" /tr "{daemon}" /st {hh}:{mm}'
             #print(command)
             os.system(command)
-            input("press enter")
+            input("press enter to back to main menu")
             start_cli()
 
     elif inp == 4:
